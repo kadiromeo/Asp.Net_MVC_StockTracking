@@ -1,0 +1,38 @@
+﻿@model List<StockTrackingProject.Models.Entity.Sale>
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Sale Detail</h2>
+<table class="table" id="tbl1">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Unit</th>
+            <th>Price</th>
+            <th>Date</th>
+            <th>Product </th>
+            <th>Customer </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>@item.Id</th>
+                <td>@item.Unit</td>
+                <td>@item.Price (₺)</td>
+                <td>@item.Date.ToShortDateString()</td>
+                <td>@item.Product.Name</td>
+                <td>@item.Customer.Name @item.Customer.Surname</td>
+
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+<td><a class="btn btn-outline-secondary">Print</a></td>

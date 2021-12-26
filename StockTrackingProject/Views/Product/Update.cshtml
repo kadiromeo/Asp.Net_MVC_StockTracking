@@ -1,0 +1,50 @@
+﻿@model StockTrackingProject.Models.Entity.Product
+
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Product Update</h2>
+@using (Html.BeginForm("Update", "Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="container row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div>
+                @Html.LabelFor(m => m.Categories)
+                @Html.DropDownListFor(m => m.Categories.Id, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
+            </div>
+            <div>
+                <label>Product Name</label>
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+            </div>
+
+            <div>
+                <label>Product Brand</label>
+                @Html.TextBoxFor(m => m.Brand, new { @class = "form-control" })
+            </div>
+            <div>
+                <label>Product Stock</label>
+                @Html.TextBoxFor(m => m.Stock, new { @class = "form-control" })
+            </div>
+            <div>
+                <label>Product Image</label>
+                <input type="file" name="Image" class="form-control" />
+            </div>
+            <div>
+                <label>Product Price</label>
+                @Html.TextBoxFor(m => m.Price, new { @class = "form-control" })
+            </div>
+            <div>
+                <button class="btn btn-outline-secondary mt-3 col-md-12">Update</button>
+            </div>
+
+        </div>
+
+        <div class="col-md-4"></div>
+
+    </div>
+
+}
+

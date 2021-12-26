@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/Home/Index/">Stock-MVC</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto  ">
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/Category/Index/">Categories</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Customer/Index/">Customers</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Product/Index/">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Sale/Index/">Sales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Product/ProductList/">Excel & PDF</a>
+                    </li>
+                    @if (Session["Admin"] != null)
+                    {
+                        <li class="nav-item">
+
+                            <a class="nav-link" href="#"> <i class="fas fa-user"></i> @Session["Admin"]</a>
+                        </li>
+                        <li class="nav-item">
+
+                            <a class="nav-link" href="/AdminLogin/logOut"> <i class="fas fa-sign-out-alt"></i>Exit</a>
+                        </li>
+                    }
+
+                </ul>
+
+            </div>
+        </nav>
+
+        <div>
+            @RenderBody()
+        </div>
+
+    </div>
+
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/3b46233d75.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

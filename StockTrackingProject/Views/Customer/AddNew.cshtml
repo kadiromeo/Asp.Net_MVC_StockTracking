@@ -1,0 +1,41 @@
+﻿@model StockTrackingProject.Models.Entity.Customer
+
+@{
+    ViewBag.Title = "AddNew";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Add New Customer</h2>
+@using (Html.BeginForm("AddNew", "Customer", FormMethod.Post))
+{
+    <div class="container row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div>
+                <label>Name</label>
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+            </div>
+
+            <div>
+                <label>Surname</label>
+                @Html.TextBoxFor(m => m.Surname, new { @class = "form-control" })
+            </div>
+            <div>
+                <label>Phone Number</label>
+                @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control" })
+            </div>
+            <div>
+                <label>Adress</label>
+                @Html.TextBoxFor(m => m.address, new { @class = "form-control" })
+            </div>
+
+            <div>
+                <button class="btn btn-outline-secondary col-md-12 mt-2">Add</button>
+            </div>
+        </div>
+
+        <div class="col-md-4"></div>
+
+    </div>
+
+}

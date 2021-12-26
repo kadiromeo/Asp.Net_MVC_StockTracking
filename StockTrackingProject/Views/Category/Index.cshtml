@@ -1,0 +1,31 @@
+﻿@model List<StockTrackingProject.Models.Entity.Category>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Categories</h2>
+<table class="table">
+    <a class="btn btn-outline-success" href="/Category/AddNew">Add new Category</a>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Category Name</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>@item.Id</th>
+                <td>@item.CategoryName</td>
+                <td><a class="btn btn-outline-secondary" href="/Category/Update/@item.Id">Update</a></td>
+                <td><a class="btn btn-danger" href="/Category/Delete/@item.Id">Delete</a></td>
+
+            </tr>
+        }
+
+    </tbody>
+</table>

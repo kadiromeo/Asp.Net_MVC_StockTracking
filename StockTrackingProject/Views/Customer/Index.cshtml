@@ -1,0 +1,58 @@
+﻿@model List<StockTrackingProject.Models.Entity.Customer>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+<h2>Customers</h2>
+<table class="table " id="tbl1">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Photo</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Phone Number</th>
+            <th>Adress</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>@item.Id</th>
+                <td><img src="~/Photos/Customer/Customer.png" width="30" /></td>
+                <td>@item.Name</td>
+                <td>@item.Surname</td>
+                <td>@item.PhoneNumber</td>
+                <td>@item.address</td>
+                <td><a class="btn btn-outline-secondary" href="/Customer/Update/@item.Id">Update</a></td>
+                <td><a class="btn btn-danger" href="/Customer/Delete/@item.Id">Delete</a></td>
+
+            </tr>
+        }
+
+    </tbody>
+</table>
+<a class="btn btn-outline-success" href="/Customer/AddNew" style="float:right">Add New Customer</a>
+
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+
+<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+
+<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+
+<script>
+
+    $('#tbl1').dataTable({});
+
+</script>

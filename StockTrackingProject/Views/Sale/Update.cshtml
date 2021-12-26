@@ -1,0 +1,44 @@
+﻿@model StockTrackingProject.Models.Entity.Sale
+
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Update Sale</h2>
+@using (Html.BeginForm("Update", "Sale", FormMethod.Post))
+{
+    <div class="container row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div>
+                <label>Date</label>
+                @Html.TextBoxFor(m => m.Date, new { @type = "date" })
+            </div>
+            <div>
+                <label>Unit</label>
+                @Html.TextBoxFor(m => m.Unit, new { @class = "form-control" })
+            </div>
+            <div>
+                <label>Price</label>
+                @Html.TextBoxFor(m => m.Price, new { @class = "form-control" })
+            </div>
+
+            <div>
+                @Html.LabelFor(m => m.Products)
+                @Html.DropDownListFor(m => m.Product.Id, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
+            </div>
+
+            <div>
+                @Html.LabelFor(m => m.Customers)
+                @Html.DropDownListFor(m => m.Customer.Id, (List<SelectListItem>)ViewBag.dgr2, new { @class = "form-control" })
+            </div>
+            <div>
+                <button class="btn btn-outline-secondary col-md-12 mt-3">Update</button>
+            </div>
+        </div>
+
+        <div class="col-md-4"></div>
+
+    </div>
+}

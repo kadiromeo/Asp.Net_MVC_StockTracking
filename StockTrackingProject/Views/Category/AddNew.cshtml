@@ -1,0 +1,24 @@
+﻿@model StockTrackingProject.Models.Entity.Category
+
+@{
+    ViewBag.Title = "AddNew";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Add New Category</h2>
+@using (Html.BeginForm("AddNew", "Category", FormMethod.Post))
+{
+    <div class="container row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div>
+                <label>Category Name</label>
+                @Html.TextBoxFor(m => m.CategoryName, new { @class = "form-control"} )
+            </div>
+            <div>
+                <button class="btn btn-outline-secondary col-md-12 mt-2">Add</button>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+}
