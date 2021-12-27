@@ -13,5 +13,6 @@ namespace StockTrackingProject.Models.Entity
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Sale> Sales { get; set; }
+        public DbSet<Contact> Contacts{ get; set; }
     }
 }

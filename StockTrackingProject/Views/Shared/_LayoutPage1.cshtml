@@ -17,35 +17,45 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto  ">
 
-                    <li class="nav-item ">
-                        <a class="nav-link" href="/Category/Index/">Categories</a>
-                    </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Customer/Index/">Customers</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Product/Index/">Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Sale/Index/">Sales</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Product/ProductList/">Excel & PDF</a>
-                    </li>
                     @if (Session["Admin"] != null)
                     {
+                        <li class="nav-item ">
+                            <a class="nav-link" href="/Category/Index/">Categories</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Customer/Index/">Customers</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Product/Index/">Products</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Sale/Index/">Sales</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Product/ProductList/">Excel & PDF</a>
+                        </li>
+
                         <li class="nav-item">
 
                             <a class="nav-link" href="#"> <i class="fas fa-user"></i> @Session["Admin"]</a>
                         </li>
+
                         <li class="nav-item">
 
                             <a class="nav-link" href="/AdminLogin/logOut"> <i class="fas fa-sign-out-alt"></i>Exit</a>
                         </li>
+
+
                     }
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Contact/Contact/">Contact!</a>
+                    </li>
                 </ul>
 
             </div>

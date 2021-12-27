@@ -1,0 +1,47 @@
+﻿@model StockTrackingProject.Models.Entity.Contact
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Contact  Us!</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <h3 class="alert-info">@ViewBag.Alert</h3>
+        <div class="col-md-6">
+            @using (Html.BeginForm("Contact", "Contact", FormMethod.Post))
+            {
+            <div>
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @placeholder = "Name" })
+            </div>
+                <br />
+                <div>
+                    @Html.TextBoxFor(m => m.Surname, new { @class = "form-control", @placeholder = "Surname" })
+                </div>
+                <br />
+                <div>
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "E-Mail" })
+                </div>
+                <br />
+                <div>
+                    @Html.TextBoxFor(m => m.Phone, new { @class = "form-control", @placeholder = "Phone" })
+                </div>
+                <br />
+                <div>
+                    @Html.TextBoxFor(m => m.Subject, new { @class = "form-control", @placeholder = "Subject" })
+                </div>
+                <br />
+                <div>
+                    @Html.TextAreaFor(m => m.Message, new { @class = "form-control", @placeholder = "Message" })
+                </div>
+                <br />
+                <div>
+                    <button class="btn btn-info">Send</button>
+                </div>
+            }
+        </div>
+
+        <div class="col-md-3"></div>
+    </div>
+</div>

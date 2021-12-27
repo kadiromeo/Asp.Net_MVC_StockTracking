@@ -371,6 +371,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminLoginController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
@@ -381,6 +382,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entity\Admin.cs" />
     <Compile Include="Models\Entity\Category.cs" />
+    <Compile Include="Models\Entity\Contact.cs" />
     <Compile Include="Models\Entity\Context.cs" />
     <Compile Include="Models\Entity\Customer.cs" />
     <Compile Include="Models\Entity\Product.cs" />
@@ -410,7 +412,6 @@
     <Content Include="Views\Category\Index.cshtml" />
     <Content Include="Views\Category\AddNew.cshtml" />
     <Content Include="Views\Category\Update.cshtml" />
-    <Content Include="Views\AdminLogin\Login.cshtml" />
     <Content Include="Scripts\bootstrap.min.js.map" />
     <Content Include="Scripts\bootstrap.js.map" />
     <Content Include="Scripts\bootstrap.esm.min.js.map" />
@@ -421,6 +422,8 @@
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Sale\Detail.cshtml" />
     <Content Include="Views\Product\ProductList.cshtml" />
+    <Content Include="Views\Contact\Contact.cshtml" />
+    <Content Include="Views\AdminLogin\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

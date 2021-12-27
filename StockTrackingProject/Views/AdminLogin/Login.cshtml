@@ -1,43 +1,35 @@
-﻿<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
 
-    <title>Login</title>
-</head>
-<body>
-    @using (Html.BeginForm("Login", "AdminLogin", FormMethod.Post))
-    {
-        <div class="container row mt-5">
-            <div class="col-md-4"></div>
-            <div class="col-md-4 bg-light">
-                <p class="text-center">@ViewBag.Message</p>
+@using (Html.BeginForm("Login", "AdminLogin", FormMethod.Post))
+{
+    <div class="container row mt-5">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 bg-light">
+            <p class="text-center">@ViewBag.Message</p>
 
-                <div>
-                    <h3 class="alert alert-warning text-center mt-3"> <i class="fas fa-user"></i> ADMIN</h3>
-                </div>
-                <div>
-                    <input type="text" name="userName" placeholder="User Name" class="form-control" />
-                </div>
-                <br />
-                <div>
-                    <input type="password" name="Password" value="" placeholder="Password" class="form-control" />
-                </div>
-                <br />
-                <div class="row">
-                    <button class="btn btn-outline-dark col-md-12">Login</button>
+            <div>
+                <h3 class="alert alert-warning text-center mt-3"> <i class="fas fa-user"></i> ADMIN</h3>
+            </div>
+            <div>
+                <input type="text" name="userName" placeholder="User Name" class="form-control" />
+            </div>
+            <br />
+            <div>
+                <input type="password" name="Password" value="" placeholder="Password" class="form-control" />
+            </div>
+            <br />
+            <div class="row">
+                <button class="btn btn-outline-dark col-md-12">Login</button>
 
-
-                </div>
 
             </div>
 
-            <div class="col-md-4 text-danger"></div>
         </div>
-    }
 
-</body>
-<script src="~/Scripts/bootstrap.min.js"></script>
-<script src="https://kit.fontawesome.com/3b46233d75.js" crossorigin="anonymous"></script>
-
-
-</html>
+        <div class="col-md-4 text-danger"></div>
+    </div>
+}
