@@ -28,14 +28,14 @@ namespace StockTrackingProject.Controllers
         {
          
                 MailMessage mail = new MailMessage();
-                mail.To.Add("internetprogodev@gmail.com");
-                mail.From = new MailAddress("internetprogodev@gmail.com");
+                mail.To.Add("example@gmail.com");
+                mail.From = new MailAddress("example@gmail.com");
                 mail.Subject = "Have a new message!" + p.Subject;
                 mail.Body = "to the person concerned"+" "+ p.Name + "-" + p.Surname +" "+ "sent you a message <b>" + p.Message;
                 mail.IsBodyHtml = true;
 
                 SmtpClient smtp = new SmtpClient();
-                smtp.Credentials = new NetworkCredential("internetprogodev@gmail.com", "internetprogodev1__");
+                smtp.Credentials = new NetworkCredential("example@gmail.com", "password");
                 smtp.Port = 587;
                 smtp.Host = "smtp.gmail.com";
                 smtp.EnableSsl = true;
