@@ -12,15 +12,15 @@
         <div class="col-md-4">
             <div>
                 <label>Date</label>
-                @Html.TextBoxFor(m => m.Date, new { @type = "date" })
+                @Html.TextBoxFor(m => m.Date, new { @type = "date", @required = "cannot be blank" })
             </div>
             <div>
                 <label>Unit</label>
-                @Html.TextBoxFor(m => m.Unit, new { @class = "form-control" })
+                @Html.TextBoxFor(m => m.Unit, new { @class = "form-control", @required = "cannot be blank" })
             </div>
             <div>
                 <label>Price</label>
-                @Html.TextBoxFor(m => m.Price, new { @class = "form-control" })
+                @Html.TextBoxFor(m => m.Price, new { @class = "form-control", @required = "cannot be blank" })
             </div>
 
             <div>

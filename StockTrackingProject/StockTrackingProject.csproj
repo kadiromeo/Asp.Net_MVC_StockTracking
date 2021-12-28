@@ -373,6 +373,7 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\SaleController.cs" />
@@ -385,6 +386,7 @@
     <Compile Include="Models\Entity\Contact.cs" />
     <Compile Include="Models\Entity\Context.cs" />
     <Compile Include="Models\Entity\Customer.cs" />
+    <Compile Include="Models\Entity\Employee.cs" />
     <Compile Include="Models\Entity\Product.cs" />
     <Compile Include="Models\Entity\Sale.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -422,8 +424,11 @@
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Sale\Detail.cshtml" />
     <Content Include="Views\Product\ProductList.cshtml" />
-    <Content Include="Views\Contact\Contact.cshtml" />
     <Content Include="Views\AdminLogin\Login.cshtml" />
+    <Content Include="Views\Contact\Contact.cshtml" />
+    <Content Include="Views\Employee\Index.cshtml" />
+    <Content Include="Views\Employee\AddNew.cshtml" />
+    <Content Include="Views\Employee\Update.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

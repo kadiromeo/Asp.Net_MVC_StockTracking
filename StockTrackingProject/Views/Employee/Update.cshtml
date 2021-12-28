@@ -1,0 +1,51 @@
+﻿@model StockTrackingProject.Models.Entity.Employee
+
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Update Employee</h2>
+@using (Html.BeginForm("Update", "Employee", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="container row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+
+            <div>
+                <label> Name</label>
+               @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @required = "cannot be blank" })
+            </div>
+
+            <div>
+                <label> Surname</label>
+                @Html.TextBoxFor(m => m.Surname, new { @class = "form-control", @required = "cannot be blank" })
+            </div>
+            <div>
+                <label> Age</label>
+                @Html.TextBoxFor(m => m.Age, new { @class = "form-control", @required = "cannot be blank" })
+            </div>
+
+
+
+            <div>
+                <label> Wage</label>
+                @Html.TextBoxFor(m => m.Wage, new { @class = "form-control", @required = "cannot be blank" })
+            </div>
+            <div>
+                <label> Department</label>
+                @Html.TextBoxFor(m => m.Department, new { @class = "form-control", @required = "cannot be blank" })
+            </div>
+
+            <div>
+                <button class="btn btn-outline-secondary mt-3 col-md-12">Add</button>
+            </div>
+
+        </div>
+
+        <div class="col-md-4"></div>
+
+    </div>
+
+}
+

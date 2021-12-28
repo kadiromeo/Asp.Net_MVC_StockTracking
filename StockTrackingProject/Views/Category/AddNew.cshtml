@@ -13,7 +13,7 @@
         <div class="col-md-4">
             <div>
                 <label>Category Name</label>
-                @Html.TextBoxFor(m => m.CategoryName, new { @class = "form-control"} )
+                @Html.TextBoxFor(m => m.CategoryName, new { @class = "form-control", @required = "cannot be blank" } )
             </div>
             <div>
                 <button class="btn btn-outline-secondary col-md-12 mt-2">Add</button>

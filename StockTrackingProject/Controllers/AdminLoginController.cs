@@ -26,7 +26,7 @@ namespace StockTrackingProject.Controllers
         [HttpPost]
         public ActionResult Login(Admin a)
         {
-            var identity = db.Admins.FirstOrDefault(m => m.userName.Equals(a.userName) && m.Password.Equals(a.Password));
+            var identity = (from i in db.Admins where a.userName.Equals(a.userName) && a.Password.Equals(a.Password) select i).SingleOrDefault();
 
             if (identity != null)
             {

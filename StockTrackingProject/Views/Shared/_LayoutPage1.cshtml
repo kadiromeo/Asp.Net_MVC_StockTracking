@@ -39,6 +39,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/Product/ProductList/">Excel & PDF</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Employee/Index/">Employees</a>
+                        </li>
 
                         <li class="nav-item">
 
@@ -50,12 +53,33 @@
                             <a class="nav-link" href="/AdminLogin/logOut"> <i class="fas fa-sign-out-alt"></i>Exit</a>
                         </li>
 
-
                     }
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Contact/Contact/">Contact!</a>
-                    </li>
+                    @if (Session["Employee"] != null)
+                    {
+                        <li class="nav-item ">
+                            <a class="nav-link" href="/Category/Index/">Categories</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Product/ProductList/">Excel & PDF</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Product/Index/">Products</a>
+                        </li>
+
+                        <li class="nav-item">
+
+                            <a class="nav-link" href="#"> <i class="fas fa-user"></i> @Session["Employee"]</a>
+                        </li>
+
+                        <li class="nav-item">
+
+                            <a class="nav-link" href="/EmployeeLogin/logOut"> <i class="fas fa-sign-out-alt"></i>Exit</a>
+                        </li>
+                    }
+
+
                 </ul>
 
             </div>

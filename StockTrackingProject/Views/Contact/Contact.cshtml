@@ -1,47 +1,61 @@
 ﻿@model StockTrackingProject.Models.Entity.Contact
 @{
-    ViewBag.Title = "Contact";
-    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    Layout = null;
 }
 
-<h2>Contact  Us!</h2>
-<div class="container">
-    <div class="row">
-        <div class="col-md-3"></div>
-        <h3 class="alert-info">@ViewBag.Alert</h3>
-        <div class="col-md-6">
-            @using (Html.BeginForm("Contact", "Contact", FormMethod.Post))
-            {
-            <div>
-                @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @placeholder = "Name" })
-            </div>
-                <br />
-                <div>
-                    @Html.TextBoxFor(m => m.Surname, new { @class = "form-control", @placeholder = "Surname" })
-                </div>
-                <br />
-                <div>
-                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "E-Mail" })
-                </div>
-                <br />
-                <div>
-                    @Html.TextBoxFor(m => m.Phone, new { @class = "form-control", @placeholder = "Phone" })
-                </div>
-                <br />
-                <div>
-                    @Html.TextBoxFor(m => m.Subject, new { @class = "form-control", @placeholder = "Subject" })
-                </div>
-                <br />
-                <div>
-                    @Html.TextAreaFor(m => m.Message, new { @class = "form-control", @placeholder = "Message" })
-                </div>
-                <br />
-                <div>
-                    <button class="btn btn-info">Send</button>
-                </div>
-            }
-        </div>
+<!DOCTYPE html>
 
-        <div class="col-md-3"></div>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+    <title>Contact</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+
+            <div class="col-md-6 mt-5 border p-5">
+                <h2>Contact  Us!</h2>
+                <h3 class="alert-info">@ViewBag.Alert</h3>
+                @using (Html.BeginForm("Contact", "Contact", FormMethod.Post))
+                {
+                    <div>
+                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @placeholder = "Name",@required= "cannot be blank"} )
+                    </div>
+                    <br />
+                    <div>
+                        @Html.TextBoxFor(m => m.Surname, new { @class = "form-control", @placeholder = "Surname", @required = "cannot be blank" })
+                    </div>
+                    <br />
+                    <div>
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "E-Mail", @required = "cannot be blank" })
+                    </div>
+                    <br />
+                    <div>
+                        @Html.TextBoxFor(m => m.Phone, new { @class = "form-control", @placeholder = "Phone", @required = "cannot be blank" })
+                    </div>
+                    <br />
+                    <div>
+                        @Html.TextBoxFor(m => m.Subject, new { @class = "form-control", @placeholder = "Subject", @required = "cannot be blank" })
+                    </div>
+                    <br />
+                    <div>
+                        @Html.TextAreaFor(m => m.Message, new { @class = "form-control", @placeholder = "Message", @required = "cannot be blank" })
+                    </div>
+                    <br />
+                    <div>
+                        <button class="btn btn-info">Send</button>
+                    </div>
+                }
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+        <a href="/AdminLogin/Login/">Press for Login! </a>
+
     </div>
-</div>
+</body>
+</html>

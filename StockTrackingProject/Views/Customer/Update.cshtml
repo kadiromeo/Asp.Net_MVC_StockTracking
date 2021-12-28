@@ -14,20 +14,20 @@
         <div class="col-md-4">
             <div>
                 <label>Name</label>
-                @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @required = "cannot be blank" })
             </div>
 
             <div>
                 <label>Surname</label>
-                @Html.TextBoxFor(m => m.Surname, new { @class = "form-control" })
+                @Html.TextBoxFor(m => m.Surname, new { @class = "form-control", @required = "cannot be blank" })
             </div>
             <div>
                 <label>Phone Number</label>
-                @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control" })
+                @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control", @required = "cannot be blank" })
             </div>
             <div>
                 <label>Adress</label>
-                @Html.TextBoxFor(m => m.address, new { @class = "form-control" })
+                @Html.TextBoxFor(m => m.address, new { @class = "form-control", @required = "cannot be blank" })
             </div>
 
             <div>
